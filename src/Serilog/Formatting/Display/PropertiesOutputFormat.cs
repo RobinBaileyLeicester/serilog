@@ -16,7 +16,7 @@ namespace Serilog.Formatting.Display;
 
 static class PropertiesOutputFormat
 {
-    static readonly JsonValueFormatter JsonValueFormatter = new("$type");
+    static readonly JsonValueFormatter JsonValueFormatter = new("__type");
 
     public static void Render(MessageTemplate template, IReadOnlyDictionary<string, LogEventPropertyValue> properties, MessageTemplate outputTemplate, TextWriter output, string? format, IFormatProvider? formatProvider = null)
     {
